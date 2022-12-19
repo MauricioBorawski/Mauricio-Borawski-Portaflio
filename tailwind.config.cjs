@@ -12,10 +12,14 @@ module.exports = {
 		extend: {
 			colors: {
 			pastel: {
-				green: "#98FF98",
-				secondary: "#E6E6E6"
+				greenPrimary: "#7cfc00",
+				greyPerl: "#E6E6E6"
 			}
-		  },},
+		  },
+		  width: {
+			xs: '390px',
+		  }
+		},
 	},
 	plugins: [],
 }

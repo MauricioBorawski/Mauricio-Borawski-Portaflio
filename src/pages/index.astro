@@ -1,13 +1,53 @@
 ---
-import Header from '../layouts/Layout.astro';
+import Header from "../layouts/Layout.astro";
 ---
 
 <Header title="Mauricio Borawski">
-	<main class="container mx-auto h-screen grid grid-rows-1 h-screen justify-items-center items-center">
-		<div>
-			<h1 class="text-pastel-green h-min text-6xl text-center">Mauricio Borawski</h1>
-			<h2 class="text-pastel-secondary h-min text-3xl pt-3 text-center">Front-End Developer ☕️💻📓</h2>
-		</div>
-	</main>
-</Header>
+  <main
+    class="container mx-auto grid h-screen h-screen grid-rows-1 items-center justify-items-center"
+  >
+    <div id="container">
+      <h1 class="h-min text-center text-6xl text-pastel-greenPrimary">
+        Mauricio Borawski
+      </h1>
+      <h2 class="h-min w-fit pt-3 text-3xl text-pastel-greyPerl">
+        Front-End Developer
+      </h2>
+    </div>
+  </main>
+  <style>
+    h2 {
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: 0.15em solid #e6e6e6; /* The typwriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto;
+      letter-spacing: 0.15em; /* Adjust as needed */
+      animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
 
+    #container {
+      
+    }
+
+    /* The typing effect */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 390px;
+      }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: #e6e6e6;
+      }
+    }
+  </style>
+</Header>
