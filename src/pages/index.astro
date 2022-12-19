@@ -3,27 +3,47 @@ import Header from "../layouts/Layout.astro";
 ---
 
 <Header title="Mauricio Borawski">
-  <div id="title-container">
-    <h1 class="h-min text-center text-6xl text-pastel-greenPrimary">
+  <div id="title-container" class="container">
+    <h1
+      class="mx-auto h-min w-fit text-center text-6xl text-pastel-greenPrimary"
+    >
       Mauricio Borawski
     </h1>
-    <h2 id="subTitle" class="h-min w-fit pt-3 text-3xl text-pastel-greyPerl">
-      Front-End Developer
+    <h2
+      id="subTitle"
+      class="h-min w-fit pt-3 text-center text-2xl text-pastel-greyPerl"
+    >
+      Software Developer
     </h2>
   </div>
-  <main id="main-content" class="container mx-auto grid h-full grid-rows-1">
+
+  <main
+    class="container mx-auto grid h-full grid-rows-1 pt-14 text-pastel-greyPerl"
+    id="main-content"
+  >
     <div>
-      <h1>Hola soy un titulo</h1>
+      <h3 class="h-min text-center text-6xl text-pastel-greyPerl">
+        Hi and welcome !
+      </h3>
+      <h4 class="h-min text-center text-4xl text-pastel-greyPerl">
+        I am a Front-End developer with three years on the field.
+        <br />
+        I specialize in building websites and web applications. I'm constaly learing
+        new things to improve my skills so I can offer high quality code. If you
+        want to chat you can contact me Contact.
+      </h4>
     </div>
   </main>
   <style>
     #title-container {
-      position: absolute;
-      padding-top: 2rem;
-      height: fit-content;
-      top: 0%;
-      right: 50%;
-      transform: translate(50%, -0%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      top: 2rem;
+      left: 50%;
+      transform: translate(-50%, 0%);
       animation: test 2s reverse;
       animation-play-state: paused;
     }
@@ -33,11 +53,12 @@ import Header from "../layouts/Layout.astro";
       white-space: nowrap;
       margin: 0 auto;
       letter-spacing: 0.15em;
-      animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end 6;
+      animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end 5;
       border-color: transparent;
     }
 
-    #container {
+    #main-content {
+      opacity: 0;
     }
     /* The typing effect */
     @keyframes typing {
@@ -45,7 +66,7 @@ import Header from "../layouts/Layout.astro";
         width: 0;
       }
       to {
-        width: 390px;
+        width: 320px;
       }
     }
 
@@ -62,10 +83,9 @@ import Header from "../layouts/Layout.astro";
 
     @keyframes test {
       to {
-        padding: 0;
         top: 50%;
-        right: 50%;
-        transform: translate(50, -50);
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
   </style>
@@ -73,6 +93,7 @@ import Header from "../layouts/Layout.astro";
     const titleContainer = document.querySelector(
       "#title-container"
     ) as HTMLElement;
+    const mainContent = document.querySelector("#main-content") as HTMLElement;
 
     let timer: number = 0;
 
@@ -82,11 +103,11 @@ import Header from "../layouts/Layout.astro";
       if (titleContainer) {
         titleContainer.style.animationPlayState = "running";
       }
-    }, 4000);
+    }, 3000);
 
     titleContainer.addEventListener("animationend", (event: AnimationEvent) => {
-      if(event.animationName === "test") {
-        titleContainer.style.position = "relative";
+      if (event.animationName === "test") {
+        mainContent.style.opacity = "1";
       }
     });
   </script>
