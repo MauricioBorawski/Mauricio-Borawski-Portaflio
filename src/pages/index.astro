@@ -3,32 +3,42 @@ import Header from "../layouts/Layout.astro";
 ---
 
 <Header title="Mauricio Borawski">
-  <main
-    class="container mx-auto grid h-screen h-screen grid-rows-1 items-center justify-items-center"
-  >
-    <div id="container">
-      <h1 class="h-min text-center text-6xl text-pastel-greenPrimary">
-        Mauricio Borawski
-      </h1>
-      <h2 class="h-min w-fit pt-3 text-3xl text-pastel-greyPerl">
-        Front-End Developer
-      </h2>
+  <div id="title-container">
+    <h1 class="h-min text-center text-6xl text-pastel-greenPrimary">
+      Mauricio Borawski
+    </h1>
+    <h2 id="subTitle" class="h-min w-fit pt-3 text-3xl text-pastel-greyPerl">
+      Front-End Developer
+    </h2>
+  </div>
+  <main id="main-content" class="container mx-auto grid h-full grid-rows-1">
+    <div>
+      <h1>Hola soy un titulo</h1>
     </div>
   </main>
   <style>
-    h2 {
-      overflow: hidden; /* Ensures the content is not revealed until the animation */
-      border-right: 0.15em solid #e6e6e6; /* The typwriter cursor */
-      white-space: nowrap; /* Keeps the content on a single line */
+    #title-container {
+      position: absolute;
+      padding-top: 2rem;
+      height: fit-content;
+      top: 0%;
+      right: 50%;
+      transform: translate(50%, -0%);
+      animation: test 2s reverse;
+      animation-play-state: paused;
+    }
+    #subTitle {
+      overflow: hidden;
+      border-right: 0.15em solid #e6e6e6;
+      white-space: nowrap;
       margin: 0 auto;
-      letter-spacing: 0.15em; /* Adjust as needed */
-      animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+      letter-spacing: 0.15em;
+      animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end 6;
+      border-color: transparent;
     }
 
     #container {
-      
     }
-
     /* The typing effect */
     @keyframes typing {
       from {
@@ -49,5 +59,35 @@ import Header from "../layouts/Layout.astro";
         border-color: #e6e6e6;
       }
     }
+
+    @keyframes test {
+      to {
+        padding: 0;
+        top: 50%;
+        right: 50%;
+        transform: translate(50, -50);
+      }
+    }
   </style>
+  <script>
+    const titleContainer = document.querySelector(
+      "#title-container"
+    ) as HTMLElement;
+
+    let timer: number = 0;
+
+    clearTimeout(timer);
+
+    timer = setTimeout(() => {
+      if (titleContainer) {
+        titleContainer.style.animationPlayState = "running";
+      }
+    }, 4000);
+
+    titleContainer.addEventListener("animationend", (event: AnimationEvent) => {
+      if(event.animationName === "test") {
+        titleContainer.style.position = "relative";
+      }
+    });
+  </script>
 </Header>
