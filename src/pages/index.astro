@@ -1,5 +1,6 @@
 ---
 import Header from "../layouts/Layout.astro";
+import "../styles/title.css";
 ---
 
 <Header title="Mauricio Borawski">
@@ -18,82 +19,37 @@ import Header from "../layouts/Layout.astro";
   </div>
 
   <main
-    class="container mx-auto grid h-full grid-rows-1 pt-14 text-pastel-greyPerl"
+    class="container mx-auto grid grid-rows-1 text-pastel-greyPerl"
     id="main-content"
   >
     <div>
-      <h3 class="h-min text-center text-6xl text-pastel-greyPerl">
+      <h3
+        id="welcome-text"
+        class="h-min text-center text-5xl text-pastel-greyPerl"
+      >
         Hi and welcome !
       </h3>
-      <h4 class="h-min text-center text-4xl text-pastel-greyPerl">
-        I am a Front-End developer with three years on the field.
-        <br />
-        I specialize in building websites and web applications. I'm constaly learing
-        new things to improve my skills so I can offer high quality code. If you
-        want to chat you can contact me Contact.
+      <h4
+        id="aboutme"
+        class="mx-auto h-min w-2/3 pt-10 text-center text-2xl text-pastel-greyPerl"
+      >
+        I'm a Front-End developer with three years of experience on the field. I
+        specialize in building websites and web applications. I'm constaly
+        learing new things to improve my skills so I can offer high quality
+        code. If you want to chat you can contact me Contact.
       </h4>
     </div>
+    <div class="mouse-scroll-content">
+      <div class="mouse"></div>
+    </div>
   </main>
-  <style>
-    #title-container {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      top: 2rem;
-      left: 50%;
-      transform: translate(-50%, 0%);
-      animation: test 2s reverse;
-      animation-play-state: paused;
-    }
-    #subTitle {
-      overflow: hidden;
-      border-right: 0.15em solid #e6e6e6;
-      white-space: nowrap;
-      margin: 0 auto;
-      letter-spacing: 0.15em;
-      animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end 5;
-      border-color: transparent;
-    }
-
-    #main-content {
-      display: none;
-    }
-    /* The typing effect */
-    @keyframes typing {
-      from {
-        width: 0;
-      }
-      to {
-        width: 320px;
-      }
-    }
-
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
-      from,
-      to {
-        border-color: transparent;
-      }
-      50% {
-        border-color: #e6e6e6;
-      }
-    }
-
-    @keyframes test {
-      to {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
-  </style>
   <script>
     const titleContainer = document.querySelector(
       "#title-container"
     ) as HTMLElement;
     const mainContent = document.querySelector("#main-content") as HTMLElement;
+    const welcomeText = document.querySelector("#welcome-text") as HTMLElement;
+    const aboutMe = document.querySelector("#aboutme") as HTMLElement;
 
     let timer: number = 0;
 
@@ -106,8 +62,10 @@ import Header from "../layouts/Layout.astro";
     }, 3000);
 
     titleContainer.addEventListener("animationend", (event: AnimationEvent) => {
-      if (event.animationName === "test") {
+      if (event.animationName === "moveUp") {
         mainContent.style.display = "block";
+        welcomeText.style.animationPlayState = "running";
+        aboutMe.style.animationPlayState = "running";
       }
     });
   </script>

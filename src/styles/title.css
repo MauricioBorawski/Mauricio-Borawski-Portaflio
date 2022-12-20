@@ -1,0 +1,116 @@
+#title-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  animation: moveUp 1.5s reverse;
+  animation-play-state: paused;
+}
+
+#subTitle {
+  overflow: hidden;
+  border-right: 0.15em solid #e6e6e6;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 2.5s steps(20, end), blink-caret 0.75s step-end 5;
+  border-color: transparent;
+}
+
+#main-content {
+  padding-top: 10rem;
+}
+
+#welcome-text {
+  /* opacity: 1; */
+  animation: mainTextApper 2s;
+  animation-play-state: paused;
+}
+
+#aboutme {
+  animation: mainTextApper 2s;
+  animation-play-state: paused;
+}
+
+.mouse-scroll-content {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mouse {
+  height: 40px;
+  width: 25px;
+  position: relative;
+  border: 2px solid #e6e6e6;
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.mouse::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e6e6e6;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 1.3s infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 320px;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #e6e6e6;
+  }
+}
+
+@keyframes moveUp {
+  to {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes mainTextApper {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes wheel {
+  from {
+    opacity: 0;
+    top: 2px;
+  }
+  to {
+    opacity: 1;
+    top: 38px;
+  }
+}
