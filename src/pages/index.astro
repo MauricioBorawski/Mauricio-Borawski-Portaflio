@@ -58,7 +58,7 @@ import Header from "../layouts/Layout.astro";
     }
 
     #main-content {
-      opacity: 0;
+      display: none;
     }
     /* The typing effect */
     @keyframes typing {
@@ -107,7 +107,7 @@ import Header from "../layouts/Layout.astro";
 
     titleContainer.addEventListener("animationend", (event: AnimationEvent) => {
       if (event.animationName === "test") {
-        mainContent.style.opacity = "1";
+        mainContent.style.display = "block";
       }
     });
   </script>
