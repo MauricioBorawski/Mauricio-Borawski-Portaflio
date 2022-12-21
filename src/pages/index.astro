@@ -1,6 +1,11 @@
 ---
 import Header from "../layouts/Layout.astro";
 import "../styles/title.css";
+import reactSvg from "../../public/svg/react-svg.svg";
+import jestSvg from "../../public/svg/jest-svg.svg";
+import reduxSvg from "../../public/svg/redux-svg.svg";
+import styledComponents from "../../public/svg/styled-components-svg.svg";
+import typeScriptSvg from "../../public/svg/typescript-svg.svg";
 ---
 
 <Header title="Mauricio Borawski">
@@ -19,37 +24,70 @@ import "../styles/title.css";
   </div>
 
   <main
-    class="container mx-auto grid grid-rows-1 text-pastel-greyPerl"
+    class="container mx-auto grid h-full grid-rows-1 text-pastel-greyPerl"
     id="main-content"
   >
     <div>
       <h3
-        id="welcome-text"
-        class="h-min text-center text-5xl text-pastel-greyPerl"
+        class="textAnimation mx-auto h-min w-5/6 text-center text-5xl text-pastel-greyPerl"
       >
         Hi and welcome !
       </h3>
       <h4
-        id="aboutme"
-        class="mx-auto h-min w-2/3 pt-10 text-center text-2xl text-pastel-greyPerl"
+        class="textAnimation mx-auto h-min w-5/6 pt-10 text-center text-2xl text-pastel-greyPerl"
       >
-        I'm a Front-End developer with three years of experience on the field. I
-        specialize in building websites and web applications. I'm constaly
-        learing new things to improve my skills so I can offer high quality
-        code. If you want to chat you can contact me Contact.
+        I'm a Front-End developer. I specialize in building websites and web
+        applications. I'm constaly learing new things to improve my skills so I
+        can offer high quality code.
       </h4>
+      <div
+        class="technologies textAnimation mx-auto h-min w-5/6 pt-10 text-center text-2xl text-pastel-greyPerl"
+      >
+        <h4>Technologies I’ve been working with recently:</h4>
+        <div
+          class="container mx-auto grid grid-cols-5 items-center justify-center pt-6"
+        >
+          <img
+            src={typeScriptSvg}
+            alt="typescript logo"
+            class="technologiesIcon"
+          />
+          <img src={reactSvg} alt="typescript logo" class="technologiesIcon" />
+          <img src={jestSvg} alt="typescript logo" class="technologiesIcon" />
+          <img src={reduxSvg} alt="typescript logo" class="technologiesIcon" />
+          <img
+            src={styledComponents}
+            alt="typescript logo"
+            class="technologiesIcon"
+          />
+        </div>
+      </div>
+      <div
+        class="container mx-auto flex flex-col items-center justify-center gap-5 pt-14"
+      >
+        <h3
+          class="textAnimation mx-auto h-min w-5/6 text-center text-4xl text-pastel-greyPerl"
+        >
+          Get In Touch!
+        </h3>
+        <button
+          class="textAnimation border-2 border-solid border-pastel-greenPrimary px-8 py-4 text-pastel-greenPrimary hover:bg-pastel-greenHover"
+          >Contact</button
+        >
+      </div>
     </div>
-    <div class="mouse-scroll-content">
+    <div class="mouse-scroll-content textAnimation">
       <div class="mouse"></div>
     </div>
   </main>
+
   <script>
     const titleContainer = document.querySelector(
       "#title-container"
     ) as HTMLElement;
-    const mainContent = document.querySelector("#main-content") as HTMLElement;
-    const welcomeText = document.querySelector("#welcome-text") as HTMLElement;
-    const aboutMe = document.querySelector("#aboutme") as HTMLElement;
+    const textContent = document.querySelectorAll(
+      ".textAnimation"
+    ) as unknown as Array<HTMLElement>;
 
     let timer: number = 0;
 
@@ -63,9 +101,9 @@ import "../styles/title.css";
 
     titleContainer.addEventListener("animationend", (event: AnimationEvent) => {
       if (event.animationName === "moveUp") {
-        mainContent.style.display = "block";
-        welcomeText.style.animationPlayState = "running";
-        aboutMe.style.animationPlayState = "running";
+        textContent.forEach((element) => {
+          element.style.animationPlayState = "running";
+        });
       }
     });
   </script>
