@@ -14,7 +14,8 @@ module.exports = {
 			pastel: {
 				greenPrimary: "#7cfc00",
 				greenHover: "rgba(124, 252, 0, .1)",
-				greyPerl: "#E6E6E6"
+				greyPerl: "#E6E6E6",
+				lightDark: "#434343"
 			}
 		  },
 		  width: {
