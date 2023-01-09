@@ -23,6 +23,7 @@
 
 #main-content {
   padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .textAnimation {
@@ -30,43 +31,13 @@
   animation-play-state: paused;
 }
 
-.mouse-scroll-content {
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.mouse {
-  height: 40px;
-  width: 25px;
-  position: relative;
-  border: 2px solid #e6e6e6;
-  border-radius: 60px;
-  overflow: hidden;
-}
-
-.mouse::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  position: absolute;
-  top: 7px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #e6e6e6;
-  border-radius: 50%;
-  opacity: 1;
-  animation: wheel 1.3s infinite;
-}
-
 .technologiesIcon {
   width: 100px;
 }
 
 .socialIcon {
-  width: 100%;
-  height: 23%;
+  width: 65px;
+  height: 65px;
   background: transparent;
   cursor: pointer;
 }
@@ -91,13 +62,11 @@
     border-color: #e6e6e6;
   }
 }
-
+/*
+TODO: Dont forget to update the js!!!
+*/
 @keyframes moveUp {
-  to {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  to {}
 }
 
 @keyframes mainTextApper {
@@ -106,16 +75,5 @@
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes wheel {
-  from {
-    opacity: 0;
-    top: 2px;
-  }
-  to {
-    opacity: 1;
-    top: 38px;
   }
 }
