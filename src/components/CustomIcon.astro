@@ -1,0 +1,14 @@
+---
+interface Props {
+  icon: string;
+  class?: string;
+}
+
+const { icon, class: className } = Astro.props;
+---
+
+<img
+  src={icon}
+  class:list={["w-5 h-5 inline", className]}
+  alt="download cv icon"
+/>

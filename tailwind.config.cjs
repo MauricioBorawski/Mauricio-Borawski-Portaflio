@@ -9,7 +9,12 @@ module.exports = {
       xl: "1440px",
     },
 
-    extend: {},
+    extend: {
+        colors: {
+          primary: "#011925",
+          primaryBlue: "#F27E63",
+        }
+    },
   },
   plugins: [],
 };

@@ -1,0 +1,19 @@
+---
+interface Props {
+  class?: string;
+  download?: string;
+  link: string;
+  target?: "_selft" | "_parent" | "_top";
+}
+
+const { class: className, download, link, target } = Astro.props;
+---
+
+<a
+  href={link}
+  target={target ?? "_blank"}
+  download={download}
+  class:list={["hover:border-b-2 border-primaryBlue", className]}
+>
+  <slot />
+</a>
