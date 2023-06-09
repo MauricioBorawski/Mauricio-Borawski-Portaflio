@@ -14,13 +14,13 @@ import Cv from "../../public/docs/Mauricio Borawski CV.pdf";
 
 <style>
   .btn-download:hover {
-    box-shadow: 0 0.5em 0.5em -0.4em #F27E63;
+    box-shadow: 0 0.5em 0.5em -0.4em #f27e63;
     transform: translateY(-0.25em);
   }
 </style>
 <main class="flex h-screen flex-col items-center justify-center lg:flex-row">
   <section class="mx-6 text-left">
-    <Title content="Mauricio Borawski" />
+    <Title>Mauricio Borawski</Title>
     <p class="max-w-xl pt-5 text-xl text-primary">
       Hi, I am a React developer with experience in helping to create and
       maintain a better code base for reusability. Passionate about learning and
@@ -36,9 +36,9 @@ import Cv from "../../public/docs/Mauricio Borawski CV.pdf";
       <Link
         link={Cv}
         download="Mauricio Borawski CV"
-        class="btn-download max-w-fit rounded-xl bg-primaryBlue p-4 text-slate-50 drop-shadow-md hover:border-b-0"
+        class="btn-download max-w-fit rounded-xl bg-primaryOrange p-4 text-slate-50 drop-shadow-md hover:border-b-0"
       >
-        {(<CustomIcon icon={DownloadIcon} />)} Download CV
+        {(<CustomIcon icon={DownloadIcon} />)} Resume
       </Link>
     </Container>
   </section>
