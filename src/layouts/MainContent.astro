@@ -19,14 +19,14 @@ import Cv from "../../public/docs/Mauricio Borawski CV.pdf";
   }
 </style>
 <main class="flex h-screen flex-col items-center justify-center lg:flex-row">
-  <section class="mx-6 text-left">
+  <section class="mx-6 text-center lg:text-left">
     <Title>Mauricio Borawski</Title>
-    <p class="max-w-xl pt-5 text-xl text-primary">
+    <p class="max-w-xl pt-5 text-xl text-primary lg:ml-4">
       Hi, I am a React developer with experience in helping to create and
       maintain a better code base for reusability. Passionate about learning and
       development with a desire to apply skills on a larger development team.
     </p>
-    <Container class="gap-4 mt-3">
+    <Container class="gap-4 mt-3 justify-center lg:justify-start lg:ml-4">
       <Link link="https://www.linkedin.com/in/mnborawski/">
         {(<CustomIcon icon={LinkedinIcon} class="h-12 w-12" />)}
       </Link>
@@ -42,7 +42,7 @@ import Cv from "../../public/docs/Mauricio Borawski CV.pdf";
       </Link>
     </Container>
   </section>
-  <section class="w-[65%]">
+  <section class="w-[65%] hidden lg:block">
     <img src={MainPhoto} />
   </section>
 </main>

@@ -1,9 +1,10 @@
 ---
 interface Props {
   type?: "h2" | "h3";
+  class?: string;
 }
 
-const { type } = Astro.props;
+const { type, class: className } = Astro.props;
 
 const fontSize = {
   h2: "text-4xl",
@@ -15,6 +16,7 @@ const fontSize = {
   class:list={[
     "leading-none text-primaryOrange font-medium",
     type ? fontSize[type] : "text-6xl",
+    className,
   ]}
 >
   <slot />
