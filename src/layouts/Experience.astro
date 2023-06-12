@@ -7,10 +7,10 @@ import ExperienceSection from "../components/ExperienceSection.astro";
 import { companies, experiences } from "../constants";
 ---
 
-<section class="m-12">
-  <Title type="h2">Where I've worked</Title>
-  <div class="mt-5 flex h-60 items-center justify-start gap-3">
-    <div class="flex gap-1 h-full w-24 flex-col items-center" id="experience-places">
+<section class="my-12 mx-6">
+  <Title type="h2" class="text-3xl md:text-4xl">Where I've worked</Title>
+  <div class="flex flex-col mt-5 items-start justify-start gap-3 md:items-center md:flex-row">
+    <div class="flex gap-1 h-full items-center md:flex-col" id="experience-places">
       {
         companies.map((company) => (
           <Button id={`btn-experience`} active={experiences[company].active}>
@@ -20,7 +20,7 @@ import { companies, experiences } from "../constants";
       }
     </div>
     <Divider />
-    <div class="h-full w-2/3">
+    <div class="h-full w-5/6 lg:w-4/6">
       {
         companies.map((company) => (
           <ExperienceSection
