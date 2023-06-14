@@ -59,7 +59,7 @@ export const projects: Projects[] = [
     title: "LoL Discord Bot",
     techonolgies: "NodeJS, Axios, discord.js",
     summary:
-      "LoL Discord Bot is a tool made for the Discord platform that lets you search for players in game and see with who is playing and also search for profiles and their stats.",
+      "LoL Discord Bot is a tool that lets you search for players in game and see with who is playing and also search for profiles and their stats.",
     github: "https://github.com/MauricioBorawski/LolDiscordBot",
     image: "./public/discord-cover.jpg",
   },
