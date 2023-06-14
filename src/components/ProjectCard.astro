@@ -1,0 +1,38 @@
+---
+import Title from "./Title.astro";
+import Container from "./Container.astro";
+import Link from "../components/Link.astro";
+
+interface Props {
+  description: string;
+  link: string;
+  technologies: string;
+  title: string;
+  image: string;
+}
+
+const { description, link, technologies, title } = Astro.props;
+---
+
+<style>
+  .btn-download:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em #f27e63;
+    transform: translateY(-0.25em);
+  }
+
+  .project-card:hover {
+    background-color: #f27e63;
+    color: white;
+  }
+</style>
+<Container
+  class=" btn-download h-60 w-80 border-primaryOrange border-2 rounded-lg justify-between items-baseline flex-col p-6"
+>
+  <Title type={"h3"}>{title}</Title>
+  <p class="text-sm">Technologies: {technologies}</p>
+  <p class="text-sm">{description}</p>
+  <Link
+    class="btn-download max-w-fit rounded-sm bg-primaryOrange py-2 px-4 text-slate-50 drop-shadow-md hover:border-b-0"
+    link={link}>Code</Link
+  >
+</Container>

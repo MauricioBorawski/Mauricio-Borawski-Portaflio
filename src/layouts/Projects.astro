@@ -1,0 +1,26 @@
+---
+import Container from "../components/Container.astro";
+import Title from "../components/Title.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+import { projects } from "../constants";
+---
+
+<section class="h-screen lg:h-[50vh]">
+  <Container class="flex-col justify-center items-center gap-8">
+    <Title type={"h2"}>My Projects</Title>
+    <Container class="flex-col gap-4 lg:flex-row lg:w-2/3 flex-wrap">
+      {
+        projects.map((project) => (
+          <ProjectCard
+            title={project.title}
+            link={project.github}
+            description={project.summary}
+            technologies={project.techonolgies}
+            image={project.image}
+          />
+        ))
+      }
+    </Container>
+  </Container>
+</section>
