@@ -29,8 +29,8 @@ const { description, link, technologies, title } = Astro.props;
   class=" btn-download h-60 w-80 border-primaryOrange border-2 rounded-lg justify-between items-baseline flex-col p-6"
 >
   <Title type={"h3"}>{title}</Title>
-  <p class="text-sm">Technologies: {technologies}</p>
-  <p class="text-sm">{description}</p>
+  <p class="text-sm text-slate-400 pl-2">Technologies: {technologies}</p>
+  <p class="text-sm pl-4">{description}</p>
   <Link
     class="btn-download max-w-fit rounded-sm bg-primaryOrange py-2 px-4 text-slate-50 drop-shadow-md hover:border-b-0"
     link={link}>Code</Link
