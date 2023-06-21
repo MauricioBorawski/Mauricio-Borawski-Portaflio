@@ -1,50 +1,23 @@
-# Welcome to [Astro](https://astro.build)
+# Welcome to my portafolio!
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+Hi! I am Mauricio a React developer located in Argentina.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Aboout this project
+This project started as a way to explore new frameworks, try new libriries and to work with new things like CI/CD, CSS animations, end to end tests and more!
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+## Technologies
+- Astro
+- Tailwind
+- Typescript
 
+## TODO List
+In this section I will record the things that are left to complete or I would like to introduce to the source code.
 
-## 🚀 Project Structure
+[] CI/CD Pipelines.
+[] Unit test and integration test.
+[] End to end test with [Playwright](https://playwright.dev/)
+## FAQ
+### Why [Astro](https://astro.build/) and not React?
+Since this is a small project mainly focus to extend my resumen on a webpage with more interactivirility, use React would have been an overkill for this situation.
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+I love React for web applications but it was not very suitable for this project.
