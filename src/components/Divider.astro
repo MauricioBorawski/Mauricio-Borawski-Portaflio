@@ -2,9 +2,10 @@
 interface Props {
   aligment?: "vertical" | "horizontal";
   width?: string;
+  class?: string;
 }
 
-const { aligment, width } = Astro.props;
+const { aligment, width, class: className } = Astro.props;
 ---
 
 <div
@@ -12,6 +13,7 @@ const { aligment, width } = Astro.props;
     "bg-gray-300 rounded",
     aligment === "horizontal" ? "w-full h-1" : "w-1 h-full",
     width ? `w-[${width}]` : "",
+    className
   ]}
 >
 </div>

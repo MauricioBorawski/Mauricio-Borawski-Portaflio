@@ -7,7 +7,7 @@ import ExperienceSection from "../components/ExperienceSection.astro";
 import { companies, experiences } from "../constants";
 ---
 
-<section class="flex flex-col my-12 mx-6 h-screen lg:h-[75vh] justify-center items-start">
+<section class="flex flex-col my-12 mx-6 h-screen lg:h-[75vh] lg:w-4/6 justify-center items-start">
   <Title type="h2" class="text-3xl md:text-4xl">Where I've worked</Title>
   <div class="flex flex-col mt-5 items-start justify-start gap-3 md:items-center md:flex-row">
     <div class="flex gap-1 h-full items-center md:flex-col" id="experience-places">
@@ -19,7 +19,7 @@ import { companies, experiences } from "../constants";
         ))
       }
     </div>
-    <Divider />
+    <Divider class="sm:hidden lg:block" />
     <div class="h-full w-5/6 lg:w-4/6">
       {
         companies.map((company) => (
