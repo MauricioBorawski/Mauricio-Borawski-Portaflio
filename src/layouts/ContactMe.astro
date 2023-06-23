@@ -4,12 +4,21 @@ import Link from "../components/Link.astro";
 import Title from "../components/Title.astro";
 ---
 
-<section class="h-[50vh] flex flex-col justify-center items-center">
+<section class="flex h-[50vh] flex-col items-center justify-center">
   <Container class="justify-center items-center flex-col gap-8 px-4">
     <Title type="h2">Get in Touch</Title>
-    <p class="text-center md:w-2/3">
-        If you are interested in working together, you can send an email down below. I will try to answer it as soon as I can :)
-    </p>
-    <Link link="mailto:mauricio.borawski@gmail.com" class="p-4 border-2 border-primaryOrange text-primaryOrange hover:bg-primaryOrange hover:text-slate-50">Contact Me</Link>
+    <Container class="flex-col">
+      <p class="text-center text-slate-200 md:w-2/3">
+        Are you interested in working together?
+      </p>
+      <p class="text-center text-slate-200 md:w-2/3">
+        Send an email down below, I will answer it as soon as I can
+      </p>
+    </Container>
+    <Link
+      link="mailto:mauricio.borawski@gmail.com"
+      class="p-4 border-2 border-primaryOrange rounded-sm text-primaryPurple hover:bg-primaryPurple hover:text-slate-50"
+      >Contact Me</Link
+    >
   </Container>
 </section>

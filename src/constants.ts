@@ -64,7 +64,7 @@ export const projects: Projects[] = [
     image: "./public/discord-cover.jpg",
   },
   {
-    title: "My Portafolio",
+    title: "This Portfolio",
     techonolgies: "Astro, Tailwind",
     summary: "This is the code for my portafolio.",
     github: "https://github.com/MauricioBorawski/my-portfolio",

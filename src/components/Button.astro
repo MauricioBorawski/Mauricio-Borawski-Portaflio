@@ -11,8 +11,8 @@ const { id, class: className, active = false } = Astro.props;
 <button
   id={id}
   class:list={[
-    "min-w-[65px] max-h-12 p-3 capitalize hover:bg-secondaryOrange hover:text-slate-50",
-    active && "bg-primaryOrange text-slate-50",
+    "w-[100px] max-h-12 p-3 capitalize text-slate-50",
+    active && "bg-primaryPurple text-slate-50",
     className,
   ]}
 >
