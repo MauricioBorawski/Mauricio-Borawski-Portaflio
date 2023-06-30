@@ -4,37 +4,41 @@ import CustomIcon from "../components/CustomIcon.astro";
 import Title from "../components/Title.astro";
 import Link from "../components/Link.astro";
 
-import LinkedinIcon from "../../public/svg/linkedin.svg";
-import GithubIcon from "../../public/svg/github.svg";
+import LinkedinIcon from "../../svg/linkedin.svg";
+import GithubIcon from "../../svg/github.svg";
 
 import Cv from "../../public/docs/Mauricio Borawski CV.pdf";
 ---
 
 <style>
   .btn-download:hover {
-    box-shadow: 0 0.5em 0.5em -0.4em #BF2C7D;
+    box-shadow: 0 0.5em 0.5em -0.4em #bf2c7d;
     transform: translateY(-0.25em);
   }
 </style>
-<main class="flex h-screen flex-col items-center justify-center lg:justify-start lg:flex-row">
+<main
+  class="flex h-screen flex-col items-center justify-center lg:flex-row lg:justify-start"
+>
   <section class="mx-6 text-center lg:text-left">
     <Title class="mt-14 lg:mt-0">Mauricio Borawski</Title>
-    <p class="my-10 text-slate-200 sm:px-5 lg:px-0 lg:max-w-xl text-xl lg:text-3xl">
-      Hello there! I am a Front End developer with experience in helping to create and
-      maintain a better code base. Passionate about learning and
+    <p
+      class="my-10 text-xl text-slate-200 sm:px-5 lg:max-w-xl lg:px-0 lg:text-3xl"
+    >
+      Hello there! I am a Front End developer with experience in helping to
+      create and maintain a better code base. Passionate about learning and
       development with a desire to apply skills on a larger development team.
     </p>
-    <Container class="gap-4 mt-3 justify-center lg:justify-start lg:ml-4">
+    <Container class="gap-4 mt-3 justify-center lg:justify-start">
       <Link link="https://www.linkedin.com/in/mnborawski/">
-        {(<CustomIcon icon={LinkedinIcon} class="h-12 w-12" />)}
+        {(<CustomIcon icon={LinkedinIcon} class="h-12 w-12 lg:h-16 lg:w-16" />)}
       </Link>
       <Link link="https://github.com/MauricioBorawski">
-        {(<CustomIcon icon={GithubIcon} class="h-12 w-12" />)}
+        {(<CustomIcon icon={GithubIcon} class="h-12 w-12 lg:h-16 lg:w-16" />)}
       </Link>
       <Link
         link={Cv}
         download="Mauricio Borawski CV"
-        class="btn-download max-w-fit rounded-xl bg-primaryPurple p-6 text-slate-50 text-2xl drop-shadow-md hover:border-b-0"
+        class="btn-download max-w-fit rounded-xl bg-primaryPurple p-5 text-slate-50 text-md drop-shadow-md hover:border-b-0 lg:p-6 lg:text-2xl"
       >
         Download CV
       </Link>
