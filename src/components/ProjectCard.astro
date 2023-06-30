@@ -26,13 +26,13 @@ const { description, link, technologies, title } = Astro.props;
   }
 </style>
 <Container
-  class=" btn-download h-64 w-80 border-primaryPurple border-2 rounded-lg justify-between items-baseline flex-col p-6"
+  class=" btn-download h-80 w-80 border-primaryPurple border-2 rounded-lg justify-between items-baseline flex-col p-6 md:h-[320px] md:w-[452px]"
 >
   <Title type={"h3"}>{title}</Title>
-  <p class="text-sm text-slate-400 pl-2">Technologies: {technologies}</p>
-  <p class="text-sm my-3 pl-4 text-slate-200">{description}</p>
+  <p class="text-md text-slate-400 pl-2 md:text-xl">Technologies: {technologies}</p>
+  <p class="text-md my-3 pl-4 text-slate-200 md:text-xl">{description}</p>
   <Link
-    class="max-w-fit rounded-sm bg-primaryPurple py-2 px-4 text-slate-50 drop-shadow-md hover:border-b-0"
+    class="max-w-fit rounded-sm bg-primaryPurple py-2 px-4 text-slate-50 text-md drop-shadow-md hover:border-b-0 md:py-3 md:px-5 md:text-xl"
     link={link}>Code</Link
   >
 </Container>
