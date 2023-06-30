@@ -6,7 +6,7 @@ import ExperienceSection from "../components/ExperienceSection.astro";
 import { companies, experiences } from "../constants";
 ---
 
-<section class="flex flex-col my-12 mx-6 h-screen lg:h-[75vh] lg:w-4/6 justify-center items-start">
+<section class="flex flex-col my-12 mx-6 h-screen justify-center items-start lg:h-[75vh] lg:w-4/6">
   <Title type="h2" class="text-3xl md:text-4xl">Where I've worked</Title>
   <div class="flex flex-col mt-5 items-start justify-start gap-6 md:items-center md:flex-row">
     <div class="flex gap-1 h-full items-center md:flex-col" id="experience-places">
@@ -40,7 +40,7 @@ import { companies, experiences } from "../constants";
 <script>
   import { companies, experiences, Companies } from "../constants";
 
-  const activeBtnClasses = ["bg-primaryOrange"];
+  const activeBtnClasses = ["bg-primaryPurple"];
 
   if (companies && experiences) {
 

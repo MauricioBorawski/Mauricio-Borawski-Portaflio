@@ -17,15 +17,15 @@ const { title, time, technologies, active, summary, achivements, id, dataSet } =
   data-company={dataSet}
 >
   <Title type={"h3"}>{title}</Title>
-  <div class="ml-3">
-    <p class= "text-gray-400 my-1">{time}</p>
-    <p class="text-gray-400 my-1">Technologies used: {technologies}</p>
+  <div class="ml-3 text-gray-400 text-xl">
+    <p class= "my-1">{time}</p>
+    <p class="my-1">Technologies used: {technologies}</p>
   </div>
-  <p class="ml-6 text-slate-200">{summary}</p>
-  <ul class="ml-6">
+  <p class="ml-6 text-slate-200 text-xl">{summary}</p>
+  <ul class="ml-6 text-slate-200 text-xl">
     {
       achivements.map((element) => (
-        <li class="text-slate-200">
+        <li>
           <span class="text-primaryOrange">▹</span>
           {element}
         </li>
