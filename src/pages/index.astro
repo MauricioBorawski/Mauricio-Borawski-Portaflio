@@ -1,14 +1,14 @@
 ---
 import Header from "../layouts/Layout.astro";
-import MainContent from "../layouts/MainContent.astro";
-import Experience from "../layouts/Experience.astro";
-import Projects from "../layouts/Projects.astro";
-import ContactMe from "../layouts/ContactMe.astro";
+import Title from "../layouts/Title.astro";
+import Experience from "../layouts/Experiencie.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
-<Header title="Mauricio Borawski">
-  <MainContent />
-  <Experience />
-  <Projects />
-  <ContactMe />
+<Header title="Mauricio Borawski - Front End Developer">
+  <div class="max-w-5xl w-full m-auto px-6">
+    <Navbar />
+    <Title />
+    <Experience />
+  </div>
 </Header>
