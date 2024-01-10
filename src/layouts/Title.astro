@@ -1,19 +1,22 @@
 ---
-import Navbar from "../components/Navbar.astro";
+import LinkedinBadge from "../components/Badges/LinkedinBadge.astro";
+import GithubBadge from "../components/Badges/GithubBadge.astro";
+import EmailBadge from "../components/Badges/EmailBadge.astro";
 ---
 
 <section class="my-32">
-  <h1 class="text-5xl text-black/80 text-pretty">
-    Hello there! <br/> 
-    I'm <span class="text-primaryBlue font-semibold">Mauricio Borawski</span>
+  <h1 class="text-pretty text-5xl text-black/80">
+    Hello there! <br />
+    I'm <span class="font-semibold text-primaryBlue"
+      >Mauricio Borawski</span
+    >
   </h1>
-  <h2 class="mt-8 text-3xl text-black/80">
-    ⭐️ + 3 years of experience
-  </h2>
-  <h2 class="text-3xl text-tertiaryBlue font-semibold">
-    ⭐️ Web Developer
-  </h2>
-  <h2 class="text-3xl text-black/80 text-pretty">
-    ⭐️ From Argentina 🇦🇷
-  </h2>
+  <h2 class="mt-8 text-3xl text-black/80">⭐️ + 3 years of experience</h2>
+  <h2 class="text-3xl font-semibold text-tertiaryBlue">⭐️ Web Developer</h2>
+  <h2 class="text-pretty text-3xl text-black/80">⭐️ From Argentina 🇦🇷</h2>
+  <div class="mt-8">
+    <LinkedinBadge />
+    <GithubBadge />
+    <EmailBadge />
+  </div>
 </section>

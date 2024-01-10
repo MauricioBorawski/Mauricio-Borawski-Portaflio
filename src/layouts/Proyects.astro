@@ -1,0 +1,11 @@
+---
+import ProjectCard from "../components/ProyectCard.astro";
+import { projects } from "../constants";
+---
+
+<section id="projects">
+  <h2 class="mb-8 text-3xl">Projects</h2>
+  <div class="flex flex-col md:flex-row items-center justify-around gap-2 flex-wrap">
+    {projects.map((project) => <ProjectCard {...project} />)}
+  </div>
+</section>
