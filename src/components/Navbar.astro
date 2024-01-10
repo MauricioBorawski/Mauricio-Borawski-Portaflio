@@ -1,0 +1,31 @@
+---
+import Download from "./Icons/Download.astro";
+---
+
+<header class="my-8 flex items-center justify-center">
+  <nav
+    class="box-border rounded-[25px] bg-white/50 p-2 shadow-xl backdrop-blur-xl"
+  >
+    <ul
+      class="text-center [&>li]:m-2 [&>li]:inline-block [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2"
+    >
+      <li
+        class="hover:rounded-[25px] hover:bg-secondaryBlue hover:text-white/100"
+      >
+        <a href="#experience">Experience</a>
+      </li>
+      <li
+        class="hover:rounded-[25px] hover:bg-secondaryBlue hover:text-white/100"
+      >
+        <a href="#projects">Projects</a>
+      </li>
+      <li class="rounded-[25px] bg-primaryBlue text-white/100">
+        <a
+          class="inline-flex items-center justify-center gap-2"
+          href="../../public/docs/Mauricio Borawski CV.pdf"
+          download><Download />Download CV</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>

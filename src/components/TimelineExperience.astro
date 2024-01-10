@@ -1,0 +1,50 @@
+---
+interface Props {
+  title: string;
+  company: string;
+  description: string;
+  date: string;
+  href: string;
+}
+
+const { title, company, description, date, href } = Astro.props;
+---
+
+<li class="mb-10 ms-4">
+  <div
+    class="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700"
+  >
+  </div>
+  <time
+    class="mb-1 text-sm font-normal leading-none text-primaryBlue"
+    >{date}</time
+  >
+  <h3 class="text-lg font-semibold text-black/70">
+    {title}
+  </h3>
+  <h3 class="text-md font-semibold text-black/70">
+    {company}
+  </h3>
+  <p class="mb-4 text-base font-normal text-gray-500">
+    {description}
+  </p>
+  <a
+    href={href}
+    target="_blank"
+    class="inline-flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-white/100 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+    >Learn more <svg
+      class="ms-2 h-3 w-3 rtl:rotate-180"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 14 10"
+    >
+      <path
+        stroke="white"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+    </svg></a
+  >
+</li>
