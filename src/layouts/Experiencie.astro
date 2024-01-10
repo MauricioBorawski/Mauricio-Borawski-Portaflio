@@ -1,0 +1,11 @@
+---
+import Experience from "../components/TimelineExperience.astro";
+import { experiences } from "../constants";
+---
+
+<section id="experience" class="py-4 my-20">
+  <h2 class="text-3xl mb-8">Experience</h2>
+  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {experiences.map((experience) => <Experience {...experience} />)}
+  </ol>
+</section>

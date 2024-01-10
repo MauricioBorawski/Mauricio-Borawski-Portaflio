@@ -1,4 +1,6 @@
 ---
+import "@fontsource-variable/onest";
+
 export interface Props {
   title: string;
 }
@@ -14,20 +16,32 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <div
+      class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"
+    >
+      <div
+        class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"
+      >
+        <slot />
+      </div>
+    </div>
   </body>
 </html>
 <style is:global>
-  @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lora", serif;
-    background-color: #151226;
+    color: #000;
+    font-family: "Onest Variable", system-ui, sans-serif;
   }
 
   body {
     min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
+
+<div class=""></div>
