@@ -45,10 +45,17 @@ export const experiences: Experiences = [
 
 export const projects: Projects[] = [
   {
-    title: "React Pokedex",
+    title: "Stitch Counter",
     description:
-      "React Pokedex is a project build for testing the Restful Pokemon API. In this Pokedex you can check the types and stats of all pokemons.",
-    github: "https://github.com/MauricioBorawski/pokedex",
+      "Stitch Counter is an app designed to keep track of the stitches in your crochet project. It features multiple individual counters as well as an overall counter. It's crafted to assist you in keeping track of the stitches in your project, ensuring you never lose your place.",
+    github: "https://github.com/MauricioBorawski/contador_vueltas",
+    src: "",
+  },
+  {
+    title: "ChadAO",
+    description:
+    "ChadAo is game inspired by the Argentum Online genre. Is a epic fantasy 2D MMORPG.",
+    github: "https://github.com/MauricioBorawski/ChadAO",
     src: "",
   },
   {
@@ -56,24 +63,6 @@ export const projects: Projects[] = [
     description:
       "LoL Discord Bot is a tool that lets you search for players in game and see with who is playing and also search for profiles and their stats.",
     github: "https://github.com/MauricioBorawski/LolDiscordBot",
-    src: "",
-  },
-  {
-    title: "ChadAO",
-    description: "ChadAo is game inspired by the Argentum Online genre. Is a epic fantasy 2D MMORPG.",
-    github: "https://github.com/MauricioBorawski/ChadAO",
-    src: "",
-  },
-  {
-    title: "Stitch Counter",
-    description: "Stitch Counter is an app designed to keep track of the stitches in your crochet project. It features multiple individual counters as well as an overall counter. It's crafted to assist you in keeping track of the stitches in your project, ensuring you never lose your place.",
-    github: "https://github.com/MauricioBorawski/contador_vueltas",
-    src: "",
-  },
-  {
-    title: "This Portfolio",
-    description: "This is the code for my portafolio.",
-    github: "https://github.com/MauricioBorawski/my-portfolio",
     src: "",
   },
 ];
